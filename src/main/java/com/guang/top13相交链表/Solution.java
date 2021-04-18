@@ -1,4 +1,4 @@
-package com.guang.top12相交链表;
+package com.guang.top13相交链表;
 
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
