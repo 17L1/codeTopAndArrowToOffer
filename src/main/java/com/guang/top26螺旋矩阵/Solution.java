@@ -1,11 +1,12 @@
 package com.guang.top26螺旋矩阵;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Solution {
     private final int INF = 101;
     public List<Integer> spiralOrder(int[][] matrix) {
+        Random random = new Random();
         int m = matrix.length;
         int n = matrix[0].length;
         List<Integer> res = new ArrayList<>();
@@ -26,4 +27,5 @@ public class Solution {
         }
         return res;
     }
+
 }
