@@ -9,16 +9,13 @@ public class LRUCache{
         int val;
         DoubleList next;
         DoubleList pre;
-
         public DoubleList(int key,int val) {
             this.key = key;
             this.val = val;
         }
-
         public DoubleList(int val) {
             this.val = val;
         }
-
         public DoubleList() {
         }
     }
@@ -55,8 +52,8 @@ public class LRUCache{
             addToHead(newNode);
             ++size;
             if (size >capacity){
-                DoubleList tail = removeTail();
-                cache.remove(tail.key);
+                DoubleList lastNode = removeTail();
+                cache.remove(lastNode.key);
                 size--;
             }
         }else {
@@ -77,9 +74,10 @@ public class LRUCache{
     }
 
     private void addToHead(DoubleList node) {
+        node.pre = head;
         node.next = head.next;
         head.next.pre = node;
-        node.pre = head;
+
         head.next = node;
     }
     private void moveToHead(DoubleList node) {

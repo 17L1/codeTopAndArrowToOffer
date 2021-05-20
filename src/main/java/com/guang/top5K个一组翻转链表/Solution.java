@@ -18,7 +18,6 @@ public class Solution {
         head.next = reverseKGroup(b,k);
         return newNode;
     }
-
     private ListNode reverse(ListNode a, ListNode b) {
         ListNode pre = null;
         ListNode cur = a;

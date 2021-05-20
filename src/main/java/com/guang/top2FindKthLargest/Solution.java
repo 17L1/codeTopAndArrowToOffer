@@ -7,7 +7,7 @@ public class Solution {
             return 0;
         }
         int n = len - 1;
-        for (int i = n / 2; i >= 0 ; i++) {
+        for (int i = n / 2; i >= 0; i++) {
             sink(nums,i,n);
         }
         for (int i = 0; i < k-1; i++) {
